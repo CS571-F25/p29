@@ -1,0 +1,13 @@
+# Ignore everything in this repo by default
+/*
+
+# Allow the ignore file itself so Git keeps it
+!.gitignore
+
+# Keep only the project folder you want
+!WebProject/
+WebProject/*
+!WebProject/p29-project/
+
+# Keep the existing top-level README
+!README.md
