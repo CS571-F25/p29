@@ -1,16 +1,32 @@
-# React + Vite
+# QuestForge Gamified Course Authoring Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QuestForge is an interactive landing experience that showcases how instructors can design game-based learning paths. The project was bootstrapped with Vite + React and implements routing, React Bootstrap components, and bespoke interactive widgets to simulate key product ideas such as streak tracking, customizable paths, and reward loops.
 
-Currently, two official plugins are available:
+## Feature Highlights
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React Router drives three top-level pages (Home, Author Tools, Engagement Lab) linked via a persistent navigation bar.
+- React Bootstrap provides the design system (Navbar, Cards, Buttons, Grid, etc.) plus a responsive layout.
+- Interactive components: animated course preview carousel, streak tracker simulator, reward showcase, and drag-toggle path builder.
+- Content focuses on communicating customizable learning paths, rewards, streak insights, and demo-ready analytics.
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+The dev server runs on `http://localhost:5173/` by default.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Building & Deploying to GitHub Pages
+
+The Vite config is set to publish into the `docs/` directory with a base path of `/p29/`. Build the static assets and push them to GitHub to keep GitHub Pages live:
+
+```bash
+npm run build
+git add .
+git commit -m "Deploy QuestForge landing page"
+git push origin main
+```
+
+Then enable GitHub Pages to serve from the `docs/` folder in the repository settings. The site will be available at `https://<username>.github.io/p29/` (or update the `base` option in `vite.config.js` to match your repo name).
